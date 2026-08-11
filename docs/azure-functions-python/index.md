@@ -24,18 +24,18 @@ This toolkit organizes those missing pieces into small, focused open-source proj
 
 ### Build
 
-| Tool | Purpose | Status |
-|---|---|---|
-| [OpenAPI](https://github.com/yeongseon/azure-functions-openapi-python) | Generate OpenAPI / Swagger docs for HTTP triggers | Usable |
-| [Validation](https://github.com/yeongseon/azure-functions-validation-python) | Request and response validation | Usable |
-| [Scaffold](https://github.com/yeongseon/azure-functions-scaffold-python) | Scaffold production-style projects | Early |
+| Tool | Purpose | Status | Links |
+|---|---|---|---|
+| [OpenAPI](/azure-functions-python/openapi/) | Generate OpenAPI / Swagger docs for HTTP triggers | Usable | [Docs](/azure-functions-python/openapi/) · [GitHub](https://github.com/yeongseon/azure-functions-openapi-python) |
+| [Validation](/azure-functions-python/validation/) | Request and response validation | Usable | [Docs](/azure-functions-python/validation/) · [GitHub](https://github.com/yeongseon/azure-functions-validation-python) |
+| [Scaffold](/azure-functions-python/scaffold/) | Scaffold production-style projects | Early | [Docs](/azure-functions-python/scaffold/) · [GitHub](https://github.com/yeongseon/azure-functions-scaffold-python) |
 
 ### Operate
 
-| Tool | Purpose | Status |
-|---|---|---|
-| [Logging](https://github.com/yeongseon/azure-functions-logging-python) | Invocation-aware structured logging | Usable |
-| [Doctor](https://github.com/yeongseon/azure-functions-doctor-python) | Run pre-deployment diagnostics | Usable |
+| Tool | Purpose | Status | Links |
+|---|---|---|---|
+| [Logging](https://github.com/yeongseon/azure-functions-logging-python) | Invocation-aware structured logging | Usable | [GitHub](https://github.com/yeongseon/azure-functions-logging-python) |
+| [Doctor](https://github.com/yeongseon/azure-functions-doctor-python) | Run pre-deployment diagnostics | Usable | [GitHub](https://github.com/yeongseon/azure-functions-doctor-python) |
 
 ### AI & Orchestration
 

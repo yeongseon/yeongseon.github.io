@@ -28,8 +28,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build site
+      - name: Build central site
         run: mkdocs build --strict
+
+      - name: Stage tool docs
+        run: ./scripts/stage-docs.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

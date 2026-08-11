@@ -1,0 +1,73 @@
+site_name: yeongseon.dev
+site_description: Building things. Writing about Azure, Python, and software.
+site_author: Yeongseon Choe
+site_url: https://yeongseon.dev/
+repo_url: https://github.com/yeongseon/yeongseon.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Azure Functions Python:
+      - Overview: azure-functions-python/index.md
+      - Getting Started: azure-functions-python/getting-started.md
+      - Roadmap: azure-functions-python/roadmap.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - tables
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yeongseon
+
+copyright: © 2026 Yeongseon Choe – MIT Licensed
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11.14.0/dist/mermaid.min.js
+  - javascripts/mermaid-init.js

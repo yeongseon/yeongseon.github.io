@@ -63,4 +63,18 @@ PY
   echo "stage-docs: '$name' -> $dest"
 done
 
+# Emit a sitemap index tying the central sitemap and every tool sitemap together
+# so search engines discover all sub-site URLs from one entry point.
+{
+  echo '<?xml version="1.0" encoding="UTF-8"?>'
+  echo '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+  echo "  <sitemap><loc>${BASE_URL}/sitemap.xml</loc></sitemap>"
+  for entry in "${TOOLS[@]}"; do
+    IFS='|' read -r name _ _ <<<"$entry"
+    echo "  <sitemap><loc>${BASE_URL}/${SUBROOT}/${name}/sitemap.xml</loc></sitemap>"
+  done
+  echo '</sitemapindex>'
+} >"$SITE_ROOT/sitemap-index.xml"
+echo "stage-docs: wrote $SITE_ROOT/sitemap-index.xml"
+
 echo "stage-docs: done"

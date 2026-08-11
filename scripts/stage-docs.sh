@@ -23,6 +23,14 @@ TOOLS=(
   "openapi|azure-functions-openapi-python|main"
   "validation|azure-functions-validation-python|main"
   "scaffold|azure-functions-scaffold-python|main"
+  "logging|azure-functions-logging-python|main"
+  "doctor|azure-functions-doctor-python|main"
+  "langgraph|azure-functions-langgraph-python|main"
+  "durable-graph|azure-functions-durable-graph-python|main"
+  "knowledge|azure-functions-knowledge-python|main"
+  "db|azure-functions-db-python|main"
+  "cookbook|azure-functions-cookbook-python|main"
+  "practical-guide|azure-functions-practical-guide|main"
 )
 
 if [[ ! -d "$SITE_ROOT" ]]; then
@@ -45,7 +53,14 @@ for entry in "${TOOLS[@]}"; do
   dest="$SITE_ROOT/$SUBROOT/$name"
   git clone --depth 1 --branch "$branch" "https://github.com/yeongseon/${repo}.git" "$src"
 
-  "$PIP" install --quiet -e "${src}[docs]"
+  # Install each tool's own doc toolchain: packaged tools expose a 'docs'
+  # extra, while guide-style repos ship no package and pin doc deps in
+  # requirements-docs.txt (macros modules, redirects, etc.).
+  if [[ -f "$src/pyproject.toml" ]]; then
+    "$PIP" install --quiet -e "${src}[docs]"
+  elif [[ -f "$src/requirements-docs.txt" ]]; then
+    "$PIP" install --quiet -r "$src/requirements-docs.txt"
+  fi
 
   python3 - "$src/mkdocs.yml" "${BASE_URL}/${SUBROOT}/${name}/" <<'PY'
 import re, sys

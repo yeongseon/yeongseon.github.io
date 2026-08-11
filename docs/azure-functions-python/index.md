@@ -34,24 +34,24 @@ This toolkit organizes those missing pieces into small, focused open-source proj
 
 | Tool | Purpose | Status | Links |
 |---|---|---|---|
-| [Logging](https://github.com/yeongseon/azure-functions-logging-python) | Invocation-aware structured logging | Usable | [GitHub](https://github.com/yeongseon/azure-functions-logging-python) |
-| [Doctor](https://github.com/yeongseon/azure-functions-doctor-python) | Run pre-deployment diagnostics | Usable | [GitHub](https://github.com/yeongseon/azure-functions-doctor-python) |
+| [Logging](/azure-functions-python/logging/) | Invocation-aware structured logging | Usable | [Docs](/azure-functions-python/logging/) · [GitHub](https://github.com/yeongseon/azure-functions-logging-python) |
+| [Doctor](/azure-functions-python/doctor/) | Run pre-deployment diagnostics | Usable | [Docs](/azure-functions-python/doctor/) · [GitHub](https://github.com/yeongseon/azure-functions-doctor-python) |
 
 ### AI & Orchestration
 
-| Tool | Purpose | Status |
-|---|---|---|
-| [LangGraph](https://github.com/yeongseon/azure-functions-langgraph-python) | LangGraph integration patterns | Experimental |
-| [Durable Graph](https://github.com/yeongseon/azure-functions-durable-graph-python) | Manifest-first graph runtime built on Durable Functions | Experimental |
-| [Knowledge](https://github.com/yeongseon/azure-functions-knowledge-python) | Knowledge retrieval (RAG) decorators | Experimental |
-| [DB](https://github.com/yeongseon/azure-functions-db-python) | DB helper and pseudo-trigger patterns | Experimental |
+| Tool | Purpose | Status | Links |
+|---|---|---|---|
+| [LangGraph](/azure-functions-python/langgraph/) | LangGraph integration patterns | Experimental | [Docs](/azure-functions-python/langgraph/) · [GitHub](https://github.com/yeongseon/azure-functions-langgraph-python) |
+| [Durable Graph](/azure-functions-python/durable-graph/) | Manifest-first graph runtime built on Durable Functions | Experimental | [Docs](/azure-functions-python/durable-graph/) · [GitHub](https://github.com/yeongseon/azure-functions-durable-graph-python) |
+| [Knowledge](/azure-functions-python/knowledge/) | Knowledge retrieval (RAG) decorators | Experimental | [Docs](/azure-functions-python/knowledge/) · [GitHub](https://github.com/yeongseon/azure-functions-knowledge-python) |
+| [DB](/azure-functions-python/db/) | DB helper and pseudo-trigger patterns | Experimental | [Docs](/azure-functions-python/db/) · [GitHub](https://github.com/yeongseon/azure-functions-db-python) |
 
 ### Recipes
 
-| Tool | Purpose | Status |
-|---|---|---|
-| [Cookbook](https://github.com/yeongseon/azure-functions-cookbook-python) | Recipes, examples, and integration patterns | Early |
-| [Practical Guide](https://github.com/yeongseon/azure-functions-practical-guide) | Practical guide to building and operating Azure Functions | Early |
+| Tool | Purpose | Status | Links |
+|---|---|---|---|
+| [Cookbook](/azure-functions-python/cookbook/) | Recipes, examples, and integration patterns | Early | [Docs](/azure-functions-python/cookbook/) · [GitHub](https://github.com/yeongseon/azure-functions-cookbook-python) |
+| [Practical Guide](/azure-functions-python/practical-guide/) | Practical guide to building and operating Azure Functions | Early | [Docs](/azure-functions-python/practical-guide/) · [GitHub](https://github.com/yeongseon/azure-functions-practical-guide) |
 
 ---
 

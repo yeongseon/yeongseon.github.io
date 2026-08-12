@@ -1,3 +1,7 @@
+---
+description: Get started with the Azure Functions Python DX Toolkit — install focused PyPI packages for OpenAPI, validation, and logging, and build a documented HTTP API.
+---
+
 # Getting Started
 
 The toolkit is a set of independent PyPI packages. Install only the ones you need.

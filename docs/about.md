@@ -1,3 +1,7 @@
+---
+description: About Yeongseon Choe and the Azure Functions Python DX Toolkit — open-source tools and guides for building production-grade Azure Functions in Python.
+---
+
 # About
 
 I'm **Yeongseon Choe** — I build tools and write about Azure, Python, and software engineering.

@@ -1,3 +1,7 @@
+---
+description: Roadmap for the Azure Functions Python DX Toolkit — planned tools and milestones across OpenAPI, validation, logging, diagnostics, scaffolding, and AI orchestration.
+---
+
 # Roadmap
 
 ## Phase 1: Hub and positioning

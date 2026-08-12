@@ -1,3 +1,7 @@
+---
+description: Azure Functions Python DX Toolkit — open-source tools for OpenAPI docs, request validation, structured logging, diagnostics, and project scaffolding, by Yeongseon Choe.
+---
+
 # yeongseon.dev
 
 Building things. Writing about **Azure**, **Python**, and **software**.

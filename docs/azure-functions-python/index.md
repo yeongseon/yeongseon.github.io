@@ -1,3 +1,7 @@
+---
+description: A developer-experience toolkit for Azure Functions in Python — generate OpenAPI docs, validate requests, structure logs, run pre-deploy diagnostics, and scaffold projects.
+---
+
 # Azure Functions Python DX Toolkit
 
 > A DX toolkit for Azure Functions Python: OpenAPI, validation, logging, diagnostics, scaffolding, and recipes.

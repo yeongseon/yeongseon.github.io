@@ -1,0 +1,31 @@
+# yeongseon.dev
+
+> Personal developer site by Yeongseon Choe. Home of the Azure Functions Python DX Toolkit — a collection of small, focused open-source tools that fill the developer-experience gap around Azure Functions on Python: OpenAPI docs, request validation, structured logging, diagnostics, project scaffolding, and recipes.
+
+## Core pages
+
+- [Home](https://yeongseon.dev/): Overview of the site and toolkit.
+- [About](https://yeongseon.dev/about/): About Yeongseon Choe.
+- [Azure Functions Python DX Toolkit](https://yeongseon.dev/azure-functions-python/): Toolkit overview and index of all tools.
+- [Getting Started](https://yeongseon.dev/azure-functions-python/getting-started/): How to install and use the toolkit.
+- [Roadmap](https://yeongseon.dev/azure-functions-python/roadmap/): Direction and planned work.
+
+## Tools
+
+- [OpenAPI](https://yeongseon.dev/azure-functions-python/openapi/): OpenAPI (Swagger) integration for Python Azure Functions.
+- [Validation](https://yeongseon.dev/azure-functions-python/validation/): Request validation for Azure Functions.
+- [Scaffold](https://yeongseon.dev/azure-functions-python/scaffold/): Project scaffolding for new function apps.
+- [Logging](https://yeongseon.dev/azure-functions-python/logging/): Structured logging for Azure Functions.
+- [Doctor](https://yeongseon.dev/azure-functions-python/doctor/): Diagnostics for Azure Functions projects.
+- [LangGraph](https://yeongseon.dev/azure-functions-python/langgraph/): LangGraph integration on Azure Functions.
+- [Durable Graph](https://yeongseon.dev/azure-functions-python/durable-graph/): Durable graph workflows on Azure Functions.
+- [Knowledge](https://yeongseon.dev/azure-functions-python/knowledge/): Knowledge/retrieval building blocks.
+- [DB](https://yeongseon.dev/azure-functions-python/db/): Database access helpers for Azure Functions.
+- [Cookbook](https://yeongseon.dev/azure-functions-python/cookbook/): Recipes and patterns.
+- [Practical Guide](https://yeongseon.dev/azure-functions-python/practical-guide/): End-to-end practical guidance.
+
+## Meta
+
+- Sitemap: https://yeongseon.dev/sitemap-index.xml
+- Author: Yeongseon Choe — https://github.com/yeongseon
+- License: MIT

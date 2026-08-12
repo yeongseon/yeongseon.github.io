@@ -49,3 +49,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify IndexNow
+        if: github.ref == 'refs/heads/main'
+        env:
+          INDEXNOW_KEY: 13a6b7f182c884771301dd9dd99a2095
+        run: |
+          curl -sS -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"yeongseon.dev\",
+              \"key\": \"${INDEXNOW_KEY}\",
+              \"keyLocation\": \"https://yeongseon.dev/${INDEXNOW_KEY}.txt\",
+              \"urlList\": [
+                \"https://yeongseon.dev/\",
+                \"https://yeongseon.dev/about/\",
+                \"https://yeongseon.dev/azure-functions-python/\",
+                \"https://yeongseon.dev/azure-functions-python/getting-started/\",
+                \"https://yeongseon.dev/azure-functions-python/roadmap/\"
+              ]
+            }" \
+            -w "\nIndexNow HTTP %{http_code}\n"

@@ -89,4 +89,4 @@ Scaffold → Validation → OpenAPI → Logging → Doctor → Deploy
 ---
 
 Feedback from real Azure Functions Python users is very welcome.
-[Open an issue →](https://github.com/yeongseon/azure-functions-python-dx/issues/new)
+[Open an issue →](https://github.com/yeongseon/yeongseon.github.io/issues/new)

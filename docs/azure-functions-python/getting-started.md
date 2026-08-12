@@ -8,7 +8,7 @@ The toolkit is a set of independent PyPI packages. Install only the ones you nee
 
 ## Build a documented HTTP API
 
-Use **OpenAPI + Validation + Logging** for OpenAPI / Swagger UI, typed request validation,
+Use [**OpenAPI**](/azure-functions-python/openapi/) + [**Validation**](/azure-functions-python/validation/) + [**Logging**](/azure-functions-python/logging/) for OpenAPI / Swagger UI, typed request validation,
 consistent error responses, and invocation-aware logs.
 
 ```bash
@@ -17,7 +17,7 @@ pip install azure-functions-openapi azure-functions-validation azure-functions-l
 
 ## Check your project before deployment
 
-Use **Doctor** for Python version checks, dependency checks, `host.json` checks, common
+Use [**Doctor**](/azure-functions-python/doctor/) for Python version checks, dependency checks, `host.json` checks, common
 misconfiguration detection, and CI-friendly diagnostics.
 
 ```bash
@@ -26,7 +26,7 @@ pip install azure-functions-doctor
 
 ## Start a new project faster
 
-Use **Scaffold + Cookbook** for project templates, recommended folder structure, practical
+Use [**Scaffold**](/azure-functions-python/scaffold/) + [**Cookbook**](/azure-functions-python/cookbook/) for project templates, recommended folder structure, practical
 examples, and reusable patterns.
 
 ```bash
@@ -35,7 +35,7 @@ pip install azure-functions-scaffold
 
 ## Explore advanced serverless patterns
 
-Use **DB + LangGraph** for DB-oriented workflow experiments, pseudo-trigger patterns, and
+Use [**DB**](/azure-functions-python/db/) + [**LangGraph**](/azure-functions-python/langgraph/) for DB-oriented workflow experiments, pseudo-trigger patterns, and
 LangGraph workflow hosting patterns.
 
 ---

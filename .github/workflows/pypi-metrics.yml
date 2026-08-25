@@ -1,0 +1,44 @@
+name: PyPI metrics
+
+on:
+  schedule:
+    # Weekly, Monday 06:00 UTC. pypistats exposes only a rolling ~180-day
+    # window, so we capture regularly to build long-term history.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pypi-metrics
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pypistats
+        run: pip install pypistats
+
+      - name: Collect download stats
+        run: python metrics/collect_downloads.py
+
+      - name: Commit updated CSV
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- metrics/pypi-downloads.csv; then
+            echo "No metrics change to commit."
+            exit 0
+          fi
+          git add metrics/pypi-downloads.csv
+          git commit -m "chore(metrics): update PyPI download stats"
+          git push

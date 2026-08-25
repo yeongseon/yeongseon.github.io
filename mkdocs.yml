@@ -38,6 +38,7 @@ nav:
       - Overview: azure-functions-python/index.md
       - Getting Started: azure-functions-python/getting-started.md
       - Roadmap: azure-functions-python/roadmap.md
+      - Release Cadence: azure-functions-python/maintenance.md
   - Contracts:
       - Endpoint metadata: contracts/endpoint.md
   - About: about.md

@@ -124,7 +124,7 @@ All links are pinned to a release tag or commit SHA so they will not drift.
 [2]: https://github.com/Azure/azure-functions-python-worker/blob/azure_functions_worker-4.45.1/workers/azure_functions_worker/dispatcher.py#L596-L688
 [3]: https://github.com/Azure/azure-functions-python-worker/blob/0f52efccc6e19a7f108cc36d6d43f33866d28e52/azure_functions_worker/protos/_src/src/proto/FunctionRpc.proto#L281-L523
 [4]: https://github.com/Azure/azure-functions-python-library/blob/1.17.0/azure/functions/decorators/function_app.py#L226-L234
-[builder-note]: https://github.com/Azure/azure-functions-python-library/blob/1.17.0/azure/functions/decorators/function_app.py#L226-L234
+[builder-note]: https://github.com/Azure/azure-functions-python-library/blob/1.17.0/azure/functions/decorators/function_app.py#L166
 
 - **Signature & type-hint inspection at load** — `azure-functions-python-worker`
   `functions.py` L383-L387, tag `azure_functions_worker-4.45.1`: the worker reads
@@ -136,10 +136,30 @@ All links are pinned to a release tag or commit SHA so they will not drift.
 - **`FunctionBuilder.build()` — where the handler is validated and registered** —
   `azure-functions-python-library` `function_app.py` L226-L234, tag `1.17.0`. [link][4]
 
+## Version-skew surface
+
+Everything above is **worker 1.x / 4.45.x observable behavior**. Azure hosts the
+worker and rolls it forward independently, so a future major worker could change
+how signatures are introspected or how bindings are keyed. The toolkit's defense
+is twofold: the validation package pins `azure-functions<2.0.0`
+([2.0 readiness notes](https://github.com/yeongseon/azure-functions-validation-python/blob/main/docs/azure-functions-2.0-readiness.md))
+and runs a weekly
+[worker-nightly lane](https://github.com/yeongseon/azure-functions-validation-python/blob/main/.github/workflows/worker-nightly.yml)
+that exercises the WorkerCompat suite against the latest pre-release
+`azure-functions` package, so signature-override or name-binding drift surfaces
+before it reaches a deployment.
+
 ## Where this contract is enforced in the toolkit
+
+Each claim above is locked by an existing test, not just asserted here:
 
 - [`azure-functions-validation`](https://github.com/yeongseon/azure-functions-validation-python)
   raises at decoration time when a metadata decorator receives a `FunctionBuilder`,
   and preserves `__signature__`/`__annotations__` so name-binding keeps working.
+  Locked by
+  [`tests/test_decorator.py` L167-241,333-500](https://github.com/yeongseon/azure-functions-validation-python/blob/main/tests/test_decorator.py#L167-L241)
+  (signature/annotation preservation and builder-received guard) and
+  [`tests/test_worker_compat_2x_spike.py` L63-92](https://github.com/yeongseon/azure-functions-validation-python/blob/main/tests/test_worker_compat_2x_spike.py#L63-L92)
+  (worker-visible passthrough signature).
 - [`azure-functions-doctor`](https://github.com/yeongseon/azure-functions-doctor-python)
   ships a `check_decorator_order` rule whose hint links back to this page.

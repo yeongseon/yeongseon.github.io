@@ -17,9 +17,23 @@ observable behavior** only:
   protocol and the Python worker actually do at load and invocation time.
 - Behavior you can rely on when building on top of the programming model.
 
-It is **not** a tour of worker internals. Every claim links to a tag- or
-commit-pinned upstream permalink, and — where a toolkit package depends on it —
-to the test in that package that locks the behavior in place.
+It is **not** a tour of worker internals. Three rules keep this section honest:
+
+- **Pinned citations.** Every claim links to a tag- or commit-pinned upstream
+  permalink, and — where a toolkit package depends on it — to the test in that
+  package that locks the behavior in place.
+- **Contract and observable behavior only**, never worker internals.
+- **Version-skew is called out.** The behavior described here is what the
+  Azure-hosted worker does *today* (worker 1.x / 4.45.x). Azure rolls the host
+  forward on its own schedule, so each page flags where a future host could
+  drift and which toolkit guard (the `azure-functions<2.0.0` cap and the
+  [worker-nightly workflow](https://github.com/yeongseon/azure-functions-validation-python/blob/main/.github/workflows/worker-nightly.yml))
+  catches that drift early.
+
+**How these claims stay verified.** Two CI lanes back this section: the hub's own
+`mkdocs build --strict` gate (`.github/workflows/deploy.yml`) keeps every
+cross-link resolvable, and the validation repo's nightly `worker-nightly.yml`
+lane exercises the live worker contract against pre-release `azure-functions`.
 
 ## Pages
 

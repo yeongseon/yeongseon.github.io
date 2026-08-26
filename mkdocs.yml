@@ -41,6 +41,9 @@ nav:
       - Release Cadence: azure-functions-python/maintenance.md
   - Contracts:
       - Endpoint metadata: contracts/endpoint.md
+  - Platform mechanics:
+      - Overview: azure-functions-python/platform/index.md
+      - How the worker binds handlers: azure-functions-python/platform/how-the-worker-binds-handlers.md
   - About: about.md
 
 markdown_extensions:

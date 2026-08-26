@@ -24,6 +24,11 @@
 - [Cookbook](https://yeongseon.dev/azure-functions-python/cookbook/): Recipes and patterns.
 - [Practical Guide](https://yeongseon.dev/azure-functions-python/practical-guide/): End-to-end practical guidance.
 
+## Platform mechanics
+
+- [Platform mechanics](https://yeongseon.dev/azure-functions-python/platform/): Neutral, source-pinned explanations of how the Azure Functions runtime and Python worker behave.
+- [How the worker binds handlers](https://yeongseon.dev/azure-functions-python/platform/how-the-worker-binds-handlers/): How the worker maps a FunctionLoadRequest to your function and binds parameters by name, and why decorator order matters.
+
 ## Meta
 
 - Sitemap: https://yeongseon.dev/sitemap-index.xml

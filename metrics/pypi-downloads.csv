@@ -9,3 +9,13 @@ date,package,last_day,last_week,last_month
 2026-08-25,azure-functions-openapi,1400,7115,26195
 2026-08-25,azure-functions-scaffold,7,43,350
 2026-08-25,azure-functions-validation,298,796,5676
+2026-08-31,azure-functions-cookbook,,,
+2026-08-31,azure-functions-db,119,305,1599
+2026-08-31,azure-functions-doctor,132,687,4110
+2026-08-31,azure-functions-durable-graph,,,
+2026-08-31,azure-functions-knowledge,,,
+2026-08-31,azure-functions-langgraph,117,282,1557
+2026-08-31,azure-functions-logging,131,623,4746
+2026-08-31,azure-functions-openapi,305,4361,24948
+2026-08-31,azure-functions-scaffold,1,48,382
+2026-08-31,azure-functions-validation,137,792,5830

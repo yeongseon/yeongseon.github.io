@@ -35,7 +35,7 @@
 /* Dark scheme brand tuning — deliberate, not muddy */
 [data-md-color-scheme="slate"] {
   --md-hue: 222;
-  --md-default-bg-color: #0b0f17;
+  --md-default-bg-color: #090d16;
   --md-primary-fg-color: #0b0f17;
   --md-accent-fg-color: var(--mt-accent);
   --md-typeset-a-color: #60a5fa;   /* blue-400 */
@@ -253,15 +253,120 @@
   color: var(--md-accent-fg-color);
 }
 
-/* ---- Hero (homepage first heading) ------------------------------------- */
-.md-typeset h1#yeongseondev {
-  font-size: 2.6rem;
-  letter-spacing: -0.03em;
-  background: linear-gradient(90deg, var(--mt-brand), var(--mt-accent));
+/* ---- Hero (homepage) ---------------------------------------------------- */
+.mt-hero {
+  position: relative;
+  text-align: center;
+  max-width: 52rem;
+  margin: 0.6rem auto 2.4rem;
+  padding: 2.2rem 1rem 0.4rem;
+  overflow: visible;
+}
+
+/* Soft radial glow behind the hero — premium dark feel */
+.mt-hero::before {
+  content: "";
+  position: absolute;
+  top: -18%;
+  left: 50%;
+  width: min(46rem, 92vw);
+  height: 22rem;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 99, 235, 0.28),
+    rgba(6, 182, 212, 0.14) 42%,
+    transparent 70%
+  );
+  filter: blur(46px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+[data-md-color-scheme="default"] .mt-hero::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 99, 235, 0.16),
+    rgba(6, 182, 212, 0.10) 42%,
+    transparent 70%
+  );
+}
+
+/* Neon-tint badge */
+.mt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.32em 0.85em;
+  margin-bottom: 1.1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  color: #0e7490;
+  background: rgba(6, 182, 212, 0.10);
+  border: 1px solid rgba(6, 182, 212, 0.28);
+}
+
+[data-md-color-scheme="slate"] .mt-badge {
+  color: #67e8f9;
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.30);
+}
+
+.md-typeset .mt-hero h1 {
+  font-size: 2.9rem;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  margin: 0 0 0.5em;
+  background: linear-gradient(96deg, var(--mt-brand) 8%, var(--mt-accent));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0.3em;
+}
+
+.md-typeset .mt-hero > p {
+  max-width: 34rem;
+  margin-inline: auto;
+  color: var(--mt-muted);
+  font-size: 0.92rem;
+}
+
+.mt-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+
+.md-typeset .mt-cta .md-button {
+  margin: 0;
+}
+
+/* ---- Feature card icons ------------------------------------------------- */
+.md-typeset .mt-features .mt-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-bottom: 0.55rem;
+  font-size: 1.05rem;
+  border-radius: var(--mt-radius-sm);
+  line-height: 1;
+  transition: transform 140ms ease;
+}
+.md-typeset .mt-features > ul > li:hover .mt-ico {
+  transform: scale(1.06);
+}
+.mt-ico--cyan    { background: rgba(6, 182, 212, 0.12); }
+.mt-ico--emerald { background: rgba(16, 185, 129, 0.12); }
+.mt-ico--amber   { background: rgba(245, 158, 11, 0.14); }
+.mt-ico--indigo  { background: rgba(99, 102, 241, 0.14); }
+
+.md-typeset .mt-features > ul > li > :first-child {
+  display: block;
 }
 
 /* ---- Footer ------------------------------------------------------------- */
@@ -271,7 +376,7 @@
 
 /* ---- Responsive tightening --------------------------------------------- */
 @media screen and (max-width: 44.9375em) {
-  .md-typeset h1#yeongseondev { font-size: 2rem; }
+  .md-typeset .mt-hero h1 { font-size: 2.1rem; }
   .md-typeset h1 { font-size: 1.7rem; }
   .md-typeset h2 { font-size: 1.28rem; }
 }

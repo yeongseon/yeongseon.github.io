@@ -22,7 +22,6 @@
 - [Knowledge](https://yeongseon.dev/azure-functions-python/knowledge/): Knowledge/retrieval building blocks.
 - [DB](https://yeongseon.dev/azure-functions-python/db/): Database access helpers for Azure Functions.
 - [Cookbook](https://yeongseon.dev/azure-functions-python/cookbook/): Recipes and patterns.
-- [Practical Guide](https://yeongseon.dev/azure-functions-python/practical-guide/): End-to-end practical guidance.
 
 ## Platform mechanics
 

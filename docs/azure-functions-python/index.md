@@ -55,7 +55,6 @@ This toolkit organizes those missing pieces into small, focused open-source proj
 | Tool | Purpose | Status | Links |
 |---|---|---|---|
 | [Cookbook](/azure-functions-python/cookbook/) | Recipes, examples, and integration patterns | Early | [Docs](/azure-functions-python/cookbook/) · [GitHub](https://github.com/yeongseon/azure-functions-cookbook-python) |
-| [Practical Guide](/azure-functions-python/practical-guide/) | Practical guide to building and operating Azure Functions | Early | [Docs](/azure-functions-python/practical-guide/) · [GitHub](https://github.com/yeongseon/azure-functions-practical-guide) |
 
 ---
 

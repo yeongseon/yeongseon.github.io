@@ -30,11 +30,64 @@
     "name": {{ config.site_name | tojson }},
     "url": {{ config.site_url | tojson }},
     "description": {{ config.site_description | tojson }},
-    "author": {
-      "@type": "Person",
-      "name": {{ config.site_author | tojson }},
-      "url": {{ (config.site_url ~ "about/") | tojson }}
-    }
+    "author": { "@id": {{ (config.site_url ~ "#person") | tojson }} }
   }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": {{ (config.site_url ~ "#person") | tojson }},
+    "name": {{ config.site_author | tojson }},
+    "url": {{ config.site_url | tojson }},
+    "jobTitle": "Software Developer",
+    "description": "Developer building open-source tooling and writing about Azure, Python, and backend engineering.",
+    "sameAs": [
+      "https://github.com/yeongseon"
+    ]
+  }
+  </script>
+
+  {%- if not page.is_homepage and page and page.title %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": {{ config.site_url | tojson }}
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ page.title | tojson }},
+        "item": {{ (page.canonical_url or config.site_url) | tojson }}
+      }
+    ]
+  }
+  </script>
+  {%- endif %}
+
+  {# Privacy-friendly analytics (GoatCounter) + outbound click tracking #}
+  <script data-goatcounter="https://yeongseon.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      if (!window.goatcounter || !window.goatcounter.count) return;
+      document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+        if (a.hostname === location.hostname) return;
+        a.addEventListener('click', function () {
+          window.goatcounter.count({
+            path: 'outbound: ' + a.href,
+            title: 'Outbound: ' + a.hostname,
+            event: true
+          });
+        });
+      });
+    });
   </script>
 {% endblock %}

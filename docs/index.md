@@ -1,58 +1,61 @@
 ---
-description: Azure Functions Python DX Toolkit — open-source tools for OpenAPI docs, request validation, structured logging, diagnostics, and project scaffolding, by Yeongseon Choe.
+description: Yeongseon Choe — developer building open-source tooling and writing about Azure, Python, and backend engineering. Home of the Azure Functions Python DX Toolkit.
 ---
 
 <div class="mt-hero" markdown>
 
-<span class="mt-badge">✨ Azure Functions Python · DX Toolkit</span>
+<span class="mt-badge">✨ Developer · Open source · Azure & Python</span>
 
-# Making Azure Functions Python DX delightful
+# Hi, I'm Yeongseon Choe
 
-Open-source tools that fill the missing developer-experience layer around
-Azure Functions Python — OpenAPI docs, request validation, structured logging,
-diagnostics, and scaffolding.
+I build open-source developer tools and write about Azure, Python, and
+backend engineering — with a focus on making everyday developer experience
+less painful.
 
 <div class="mt-cta" markdown>
-[Explore the toolkit →](azure-functions-python/index.md){ .md-button .md-button--primary }
-[Getting Started](azure-functions-python/getting-started.md){ .md-button }
+[Read writing →](writing/index.md){ .md-button .md-button--primary }
+[Explore projects](projects/index.md){ .md-button }
 [GitHub](https://github.com/yeongseon){ .md-button }
 </div>
 
 </div>
 
-## Azure Functions Python DX Toolkit
-
-A collection of small, focused open-source projects that fill the missing developer-experience
-layer around Azure Functions Python — OpenAPI, validation, logging, diagnostics, scaffolding,
-and recipes.
+## Selected work
 
 <div class="grid cards mt-features" markdown>
 
--   <span class="mt-ico mt-ico--cyan">📑</span> **[OpenAPI](azure-functions-python/openapi/)**
+-   <span class="mt-ico mt-ico--cyan">🧰</span> **[Azure Functions Python DX Toolkit](azure-functions-python/index.md)**
 
     ---
 
-    Generate OpenAPI / Swagger docs for HTTP triggers from a single decorator.
+    A family of small, focused open-source packages that fill the missing
+    developer-experience layer around Azure Functions Python — OpenAPI,
+    validation, logging, diagnostics, and scaffolding.
 
--   <span class="mt-ico mt-ico--emerald">🛡️</span> **[Validation](azure-functions-python/validation/)**
-
-    ---
-
-    Pydantic-backed request and response validation at runtime.
-
--   <span class="mt-ico mt-ico--amber">🪵</span> **[Logging](azure-functions-python/logging/)**
+-   <span class="mt-ico mt-ico--emerald">📚</span> **[Projects](projects/index.md)**
 
     ---
 
-    Invocation-aware structured logging for traceable distributed errors.
-
--   <span class="mt-ico mt-ico--indigo">🩺</span> **[Doctor](azure-functions-python/doctor/)**
-
-    ---
-
-    Pre-deployment diagnostics for bindings and environment variables.
+    A running index of the tools and experiments I maintain, with links to
+    docs and source.
 
 </div>
+
+## Writing
+
+I write practical, opinionated notes on Azure Functions, Python tooling, and
+backend engineering.
+
+[Browse all writing →](writing/index.md){ .md-button }
+
+## Azure Functions Python DX Toolkit
+
+My main engineering focus is an open-source toolkit for building
+production-grade Azure Functions in Python — ten small packages covering
+OpenAPI docs, request validation, structured logging, pre-deploy diagnostics,
+scaffolding, and AI/orchestration patterns.
+
+[Explore the toolkit →](azure-functions-python/index.md){ .md-button .md-button--primary }
 
 ---
 

@@ -42,14 +42,16 @@ theme:
 
 nav:
   - Home: index.md
+  - Writing: writing/index.md
+  - Projects: projects/index.md
   - Azure Functions Python:
       - Overview: azure-functions-python/index.md
       - Getting Started: azure-functions-python/getting-started.md
       - Roadmap: azure-functions-python/roadmap.md
       - Release Cadence: azure-functions-python/maintenance.md
-  - Platform mechanics:
-      - Overview: azure-functions-python/platform/index.md
-      - How the worker binds handlers: azure-functions-python/platform/how-the-worker-binds-handlers.md
+      - Platform mechanics:
+          - Overview: azure-functions-python/platform/index.md
+          - How the worker binds handlers: azure-functions-python/platform/how-the-worker-binds-handlers.md
   - About: about.md
 
 markdown_extensions:

@@ -1,0 +1,277 @@
+/* ==========================================================================
+   yeongseon.dev — "Modern Tech" theme
+   Custom layer on top of Material for MkDocs.
+   Goals: readable typography, generous whitespace, refined blue/cyan accents,
+   polished code blocks / tables / cards. Works in light and dark schemes.
+   ========================================================================== */
+
+/* ---- Design tokens ------------------------------------------------------ */
+:root {
+  --mt-brand: #2563eb;         /* blue-600 */
+  --mt-brand-strong: #1d4ed8;  /* blue-700 */
+  --mt-accent: #06b6d4;        /* cyan-500 */
+  --mt-radius: 0.65rem;
+  --mt-radius-sm: 0.4rem;
+  --mt-measure: 46rem;         /* comfortable reading width */
+
+  /* Material typography tuning */
+  --md-text-font-weight-heading: 700;
+}
+
+/* Light scheme brand tuning */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--mt-brand);
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: var(--mt-brand-strong);
+  --md-accent-fg-color: var(--mt-brand-strong);
+  --md-typeset-a-color: var(--mt-brand);
+  --mt-surface: #ffffff;
+  --mt-surface-2: #f8fafc;      /* slate-50 */
+  --mt-border: #e2e8f0;         /* slate-200 */
+  --mt-code-bg: #f6f8fa;
+  --mt-muted: #64748b;          /* slate-500 */
+}
+
+/* Dark scheme brand tuning — deliberate, not muddy */
+[data-md-color-scheme="slate"] {
+  --md-hue: 222;
+  --md-default-bg-color: #0b0f17;
+  --md-primary-fg-color: #0b0f17;
+  --md-accent-fg-color: var(--mt-accent);
+  --md-typeset-a-color: #60a5fa;   /* blue-400 */
+  --mt-surface: #0f1520;
+  --mt-surface-2: #131a26;
+  --mt-border: #263143;
+  --mt-code-bg: #0f1520;
+  --mt-muted: #94a3b8;             /* slate-400 */
+}
+
+/* ---- Base typography & rhythm ------------------------------------------ */
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.72;
+  letter-spacing: 0.1px;
+}
+
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  margin-block: 0.75em;
+}
+
+/* Constrain prose measure for readability, but let wide blocks breathe */
+.md-typeset > p,
+.md-typeset > ul,
+.md-typeset > ol,
+.md-typeset > blockquote {
+  max-width: var(--mt-measure);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.md-typeset h1 {
+  font-size: 2.05rem;
+  margin-bottom: 0.6em;
+}
+
+.md-typeset h2 {
+  font-size: 1.45rem;
+  margin-top: 2.4em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--mt-border);
+}
+
+.md-typeset h3 {
+  font-size: 1.12rem;
+  margin-top: 1.9em;
+}
+
+/* First heading shouldn't get the huge top margin */
+.md-typeset h2:first-of-type,
+.md-typeset h1 + h2 {
+  margin-top: 1.2em;
+}
+
+/* ---- Links -------------------------------------------------------------- */
+.md-typeset a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 120ms ease;
+}
+.md-typeset a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* ---- Inline code & code blocks ----------------------------------------- */
+.md-typeset code {
+  font-size: 0.82em;
+  padding: 0.15em 0.4em;
+  border-radius: var(--mt-radius-sm);
+  background: var(--mt-code-bg);
+  border: 1px solid var(--mt-border);
+}
+
+.md-typeset pre > code {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.md-typeset pre {
+  border-radius: var(--mt-radius);
+}
+
+.md-typeset .highlight > pre,
+.md-typeset pre > code {
+  border-radius: var(--mt-radius);
+}
+
+.md-typeset .highlight {
+  border: 1px solid var(--mt-border);
+  border-radius: var(--mt-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.md-typeset .highlight pre {
+  margin: 0;
+}
+
+/* ---- Tables (heavily used on this site) -------------------------------- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--mt-border);
+  border-radius: var(--mt-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  font-size: 0.8rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--mt-surface-2);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--mt-border);
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.62em 0.9em;
+}
+
+.md-typeset table:not([class]) tr {
+  transition: background-color 120ms ease;
+  border-bottom: 1px solid var(--mt-border);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: var(--mt-surface-2);
+}
+
+/* ---- Grid cards (homepage highlights) ---------------------------------- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border: 1px solid var(--mt-border);
+  border-radius: var(--mt-radius);
+  padding: 1.1rem 1.2rem;
+  background: var(--mt-surface);
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--mt-brand);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.7em 0;
+  border-color: var(--mt-border);
+}
+
+.md-typeset .grid.cards > ul > li > :first-child {
+  font-size: 1.02rem;
+}
+
+/* ---- Buttons ------------------------------------------------------------ */
+.md-typeset .md-button {
+  border-radius: var(--mt-radius-sm);
+  font-weight: 600;
+  padding: 0.5em 1.1em;
+  border-width: 1px;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.md-typeset .md-button--primary {
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.md-typeset .md-button:hover {
+  transform: translateY(-1px);
+}
+
+/* ---- Admonitions & blockquotes ----------------------------------------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--mt-radius);
+  border-left-width: 0.24rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  font-size: 0.78rem;
+}
+
+.md-typeset blockquote {
+  border-left: 0.24rem solid var(--mt-brand);
+  color: var(--mt-muted);
+  background: var(--mt-surface-2);
+  border-radius: 0 var(--mt-radius-sm) var(--mt-radius-sm) 0;
+  padding: 0.35em 1em;
+}
+
+/* ---- Header / navigation polish ---------------------------------------- */
+.md-header {
+  box-shadow: 0 1px 0 var(--mt-border);
+}
+
+.md-tabs {
+  border-bottom: 1px solid transparent;
+}
+
+.md-nav__link--active,
+.md-typeset .md-nav__link--active {
+  font-weight: 600;
+}
+
+/* Active/hover nav clarity */
+.md-nav__item .md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ---- Hero (homepage first heading) ------------------------------------- */
+.md-typeset h1#yeongseondev {
+  font-size: 2.6rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(90deg, var(--mt-brand), var(--mt-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.3em;
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+.md-footer-meta {
+  background: var(--mt-surface-2);
+}
+
+/* ---- Responsive tightening --------------------------------------------- */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset h1#yeongseondev { font-size: 2rem; }
+  .md-typeset h1 { font-size: 1.7rem; }
+  .md-typeset h2 { font-size: 1.28rem; }
+}

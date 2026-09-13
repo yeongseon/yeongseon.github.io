@@ -42,6 +42,8 @@ theme:
 
 nav:
   - Home: index.md
+  - CUBRID Python Ecosystem:
+      - Building the ecosystem: cubrid-ecosystem/index.md
   - Azure Functions Python:
       - Overview: azure-functions-python/index.md
       - Getting Started: azure-functions-python/getting-started.md

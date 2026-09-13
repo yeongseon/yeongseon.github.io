@@ -63,7 +63,10 @@ jobs:
               \"keyLocation\": \"https://yeongseon.dev/${INDEXNOW_KEY}.txt\",
               \"urlList\": [
                 \"https://yeongseon.dev/\",
-                \"https://yeongseon.dev/about/\",
+                "https://yeongseon.dev/about/",
+                "https://yeongseon.dev/writing/",
+                "https://yeongseon.dev/writing/structure-azure-functions-python-v2-apps/",
+                "https://yeongseon.dev/projects/",
                 \"https://yeongseon.dev/azure-functions-python/\",
                 \"https://yeongseon.dev/azure-functions-python/getting-started/\",
                 \"https://yeongseon.dev/azure-functions-python/roadmap/\",

@@ -72,6 +72,22 @@
   </script>
   {%- endif %}
 
+  {%- if page.meta and page.meta.date %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": {{ page.title | tojson }},
+    "description": {{ (page.meta.description or config.site_description) | tojson }},
+    "datePublished": {{ page.meta.date | string | tojson }},
+    "dateModified": {{ page.meta.date | string | tojson }},
+    "mainEntityOfPage": {{ (page.canonical_url or config.site_url) | tojson }},
+    "author": { "@id": {{ (config.site_url ~ "#person") | tojson }} },
+    "publisher": { "@id": {{ (config.site_url ~ "#person") | tojson }} }
+  }
+  </script>
+  {%- endif %}
+
   {# Privacy-friendly analytics (GoatCounter) + outbound click tracking #}
   <script data-goatcounter="https://yeongseon.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>

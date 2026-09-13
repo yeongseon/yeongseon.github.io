@@ -42,7 +42,9 @@ theme:
 
 nav:
   - Home: index.md
-  - Writing: writing/index.md
+  - Writing:
+      - Overview: writing/index.md
+      - Structuring Azure Functions Python v2 apps: writing/structure-azure-functions-python-v2-apps.md
   - Projects: projects/index.md
   - Azure Functions Python:
       - Overview: azure-functions-python/index.md

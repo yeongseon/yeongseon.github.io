@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#03180e" />
+  <meta name="color-scheme" content="dark" />
+  <title>JS20 FUTSAL CUP 2026 — 장성고 20회 졸업생 풋살대회</title>
+  <meta name="description" content="2026.10.17 · 장성고등학교 20회 졸업생 연례 풋살대회. 팀 추천, 스쿼드 공개, 경기 결과와 수상 기록까지." />
+  <link rel="canonical" href="https://yeongseon.dev/js20-futsal/" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JS20 FUTSAL CUP" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="JS20 FUTSAL CUP 2026" />
+  <meta property="og:description" content="10.17 · 두 팀, 한 경기, 그리고 지나치게 진지한 월드컵급 연출." />
+  <meta property="og:url" content="https://yeongseon.dev/js20-futsal/" />
+  <meta property="og:image" content="https://yeongseon.dev/js20-futsal/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JS20 Futsal Cup — Jangseong High School 20th alumni annual futsal event" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JS20 FUTSAL CUP 2026" />
+  <meta name="twitter:description" content="장성고 20회 졸업생 연례 풋살대회 · 17 OCT 2026" />
+  <meta name="twitter:image" content="https://yeongseon.dev/js20-futsal/og.png" />
+
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="JS20 FUTSAL CUP home">
+      <img src="./logo.svg" alt="JS20 FUTSAL CUP" />
+      <span><b>JS20</b><small>FUTSAL CUP</small></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#match">THE MATCH</a>
+      <a href="#draft">TEAM DRAFT</a>
+      <a href="#squads">SQUADS</a>
+      <a href="#awards">AWARDS</a>
+    </nav>
+    <a class="edition" href="#archive"><span class="edition-label">EDITION</span><b id="editionYear">2026</b></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-lines" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="dot"></span> JANGSEONG HIGH SCHOOL · CLASS 20</div>
+        <h1><span>FUTSAL</span><span>CUP <em id="heroYear">2026</em></span></h1>
+        <p class="tagline" id="tagline">BACK TOGETHER. BACK ON THE PITCH.</p>
+        <div class="hero-meta">
+          <div><small>MATCHDAY</small><strong id="dateLabel">17 OCT 2026</strong></div>
+          <div><small>KICK-OFF</small><strong id="kickoff">TBA</strong></div>
+          <div><small>FORMAT</small><strong>2 TEAMS · 1 MATCH</strong></div>
+        </div>
+      </div>
+      <div class="hero-mark reveal delay-1">
+        <div class="mark-frame">
+          <img src="./logo.svg" alt="JS20 tournament crest" />
+          <div class="big20">20</div>
+          <div class="mark-caption">ANNUAL ALUMNI FUTSAL</div>
+        </div>
+      </div>
+      <div class="hero-bottom reveal delay-2">
+        <div class="countdown" id="countdown" aria-live="polite">
+          <span class="countdown-kicker">MATCHDAY COUNTDOWN</span>
+          <strong id="daysLeft">--</strong><span>DAYS TO GO</span>
+        </div>
+        <a class="primary-cta" href="#draft">TEAM DRAFT <span>↘</span></a>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Event ticker">
+      <div class="ticker-track">
+        <span>JS20 FUTSAL CUP</span><i>●</i><span>17 OCT 2026</span><i>●</i><span>TEAM DRAFT</span><i>●</i><span>FRESH PODO</span><i>●</i>
+        <span>JS20 FUTSAL CUP</span><i>●</i><span>17 OCT 2026</span><i>●</i><span>TEAM DRAFT</span><i>●</i><span>FRESH PODO</span><i>●</i>
+      </div>
+    </section>
+
+    <section class="section match-section" id="match">
+      <div class="section-heading reveal">
+        <div><span class="section-index">01</span><span class="kicker">THE MATCH</span></div>
+        <h2>ONE MATCH.<br/>ALL THE BRAGGING RIGHTS.</h2>
+      </div>
+      <div class="match-card reveal">
+        <div class="match-status"><span class="status-pill" id="statusPill">SCHEDULED</span><span id="matchVenue">VENUE TBA</span></div>
+        <div class="versus">
+          <article class="team team-a">
+            <span class="team-code" id="teamACode">GRN</span>
+            <div class="team-badge badge-green">G</div>
+            <h3 id="teamAName">TEAM GREEN</h3>
+            <p>SQUAD REVEAL PENDING</p>
+          </article>
+          <div class="vs-center">
+            <span class="match-date" id="matchDate">17 OCT</span>
+            <strong>VS</strong>
+            <span class="match-time">KICK-OFF <b id="matchKickoff">TBA</b></span>
+          </div>
+          <article class="team team-b">
+            <span class="team-code" id="teamBCode">WHT</span>
+            <div class="team-badge badge-white">W</div>
+            <h3 id="teamBName">TEAM WHITE</h3>
+            <p>SQUAD REVEAL PENDING</p>
+          </article>
+        </div>
+        <div class="match-foot">
+          <span>JANGSEONG 20TH CLASS · ANNUAL FUTSAL</span>
+          <span class="micro">UNOFFICIAL ALUMNI EVENT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section draft-section" id="draft">
+      <div class="section-heading reveal">
+        <div><span class="section-index">02</span><span class="kicker">TEAM DRAFT</span></div>
+        <h2>NO DRAW.<br/>WE BUILD THE TEAMS.</h2>
+      </div>
+      <div class="draft-grid">
+        <article class="draft-console reveal">
+          <div class="console-top">
+            <span>TEAM RECOMMENDATION ENGINE</span>
+            <span class="console-light">READY</span>
+          </div>
+          <div class="draft-visual" aria-hidden="true">
+            <div class="pitch-line pitch-circle"></div>
+            <div class="draft-side left"><b>GREEN</b><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span></div>
+            <div class="draft-side right"><b>WHITE</b><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span></div>
+          </div>
+          <button class="draft-button" id="draftButton" type="button">BUILD THE TEAMS <span>↻</span></button>
+          <p id="draftMessage">참가자 명단이 확정되면 팀 추천 기능이 활성화됩니다.</p>
+        </article>
+        <div class="draft-copy reveal delay-1">
+          <div class="rule"><span>01</span><div><b>PLAYER POOL</b><p>참가자 명단을 확정한다.</p></div></div>
+          <div class="rule"><span>02</span><div><b>TEAM RECOMMENDATION</b><p>두 팀의 인원과 전력을 균형 있게 추천한다.</p></div></div>
+          <div class="rule"><span>03</span><div><b>FINAL ADJUSTMENT</b><p>친구들끼리 한 번 더 조정하고 최종 확정.</p></div></div>
+          <div class="rule"><span>04</span><div><b>SQUAD REVEAL</b><p>월드컵 발표처럼 팀별 라인업을 공개한다.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section squads-section" id="squads">
+      <div class="section-heading reveal">
+        <div><span class="section-index">03</span><span class="kicker">SQUADS</span></div>
+        <h2>THE NAMES<br/>ARE COMING.</h2>
+      </div>
+      <div class="squad-board reveal" id="squadBoard">
+        <div class="squad-empty">
+          <span class="giant-question">?</span>
+          <div><b>SQUAD ANNOUNCEMENT</b><p>라인업 확정 후 공개됩니다.</p></div>
+          <span class="coming">COMING SOON</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section awards-section" id="awards">
+      <div class="section-heading reveal">
+        <div><span class="section-index">04</span><span class="kicker">AFTER THE FINAL</span></div>
+        <h2>GLORY GETS<br/>RECORDED.</h2>
+      </div>
+      <div class="award-grid reveal" id="awardGrid">
+        <article class="award-card champion"><span class="award-icon">★</span><small>CHAMPIONS</small><b>—</b><p>FINAL WINNER</p></article>
+        <article class="award-card"><span class="award-icon">⚽</span><small>GOLDEN BOOT</small><b>—</b><p>TOP SCORER</p></article>
+        <article class="award-card"><span class="award-icon">↗</span><small>ASSIST KING</small><b>—</b><p>TOP ASSISTS</p></article>
+        <article class="award-card sponsor-award"><span class="award-icon">◆</span><small>FRESH PODO MVP</small><b>—</b><p>PLAYER OF THE MATCH</p></article>
+      </div>
+      <p class="award-note reveal">경기 종료 후 결과, 득점왕, 도움왕, MVP와 우승팀을 이 페이지에 기록합니다.</p>
+    </section>
+
+    <section class="sponsor-section">
+      <div class="sponsor-wrap reveal">
+        <div class="sponsor-label">OFFICIAL EVENT PARTNER</div>
+        <a class="sponsor-lockup" id="sponsorLink" href="https://m.smartstore.naver.com/fresh_podo" target="_blank" rel="noopener noreferrer">
+          <div class="grape-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div><span>PRESENTED BY</span><strong>FRESH PODO</strong><small>신선포도농원</small></div>
+          <b class="sponsor-arrow">↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="archive section" id="archive">
+      <div class="archive-copy reveal">
+        <span class="kicker">ANNUAL EDITION</span>
+        <h2>ONE SITE.<br/>EVERY YEAR.</h2>
+        <p>매년 날짜·선수·결과만 업데이트하면 같은 주소에서 계속 사용할 수 있도록 구성했습니다. 이전 대회 기록도 에디션별로 쌓을 수 있습니다.</p>
+      </div>
+      <div class="edition-card reveal delay-1">
+        <div><span>CURRENT EDITION</span><b>2026</b></div>
+        <p>17 OCT · PRE-MATCH</p>
+        <i>→</i>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="./logo.svg" alt="" /><div><b>JS20 FUTSAL CUP</b><span>JANGSEONG HIGH SCHOOL · CLASS 20</span></div></div>
+    <div class="footer-note">FIFA-inspired parody presentation for a private alumni event. Not affiliated with or endorsed by FIFA or Jangseong High School.</div>
+    <div class="footer-year">© <span id="footerYear">2026</span> JS20</div>
+  </footer>
+</body>
+</html>

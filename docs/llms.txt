@@ -18,8 +18,8 @@
 - [Logging](https://yeongseon.dev/azure-functions-python/logging/): Structured logging for Azure Functions.
 - [Doctor](https://yeongseon.dev/azure-functions-python/doctor/): Diagnostics for Azure Functions projects.
 - [LangGraph](https://yeongseon.dev/azure-functions-python/langgraph/): LangGraph integration on Azure Functions.
-- [Durable Graph](https://yeongseon.dev/azure-functions-python/durable-graph/): Durable graph workflows on Azure Functions.
-- [Knowledge](https://yeongseon.dev/azure-functions-python/knowledge/): Knowledge/retrieval building blocks.
+- [Durable Graph](https://yeongseon.dev/azure-functions-python/durable-graph/): Retired, unsupported; never published to PyPI.
+- [Knowledge](https://yeongseon.dev/azure-functions-python/knowledge/): Retired, unsupported; never published to PyPI.
 - [DB](https://yeongseon.dev/azure-functions-python/db/): Database access helpers for Azure Functions.
 - [Cookbook](https://yeongseon.dev/azure-functions-python/cookbook/): Recipes and patterns.
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">JS20 Futsal Cup crest</title>
+  <desc id="desc">Original green tournament crest for the Jangseong High School 20th graduating class alumni futsal event.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00b85a"/>
+      <stop offset="1" stop-color="#006d34"/>
+    </linearGradient>
+  </defs>
+  <path d="M160 16 286 60v96c0 77-48 126-126 148C82 282 34 233 34 156V60z" fill="#03180e" stroke="#b9ff4b" stroke-width="8"/>
+  <path d="M160 32 268 70v84c0 65-39 106-108 128-69-22-108-63-108-128V70z" fill="url(#g)"/>
+  <path d="M75 197c29-23 58-33 85-33s56 10 85 33" fill="none" stroke="#d8ff95" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+  <circle cx="160" cy="163" r="21" fill="none" stroke="#d8ff95" stroke-width="8"/>
+  <path d="M160 81v61M95 163h44M181 163h44" stroke="#d8ff95" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+  <text x="160" y="116" text-anchor="middle" fill="#fff" font-family="Arial Black,Arial,sans-serif" font-size="48" font-weight="900" letter-spacing="-2">JS20</text>
+  <text x="160" y="243" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="5">FUTSAL</text>
+  <text x="160" y="270" text-anchor="middle" fill="#b9ff4b" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="4">ALUMNI CUP</text>
+</svg>

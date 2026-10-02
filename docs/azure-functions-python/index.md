@@ -46,8 +46,8 @@ This toolkit organizes those missing pieces into small, focused open-source proj
 | Tool | Purpose | Status | Links |
 |---|---|---|---|
 | [LangGraph](/azure-functions-python/langgraph/) | LangGraph integration patterns | Experimental | [Docs](/azure-functions-python/langgraph/) · [GitHub](https://github.com/yeongseon/azure-functions-langgraph-python) |
-| [Durable Graph](/azure-functions-python/durable-graph/) | Manifest-first graph runtime built on Durable Functions | Experimental | [Docs](/azure-functions-python/durable-graph/) · [GitHub](https://github.com/yeongseon/azure-functions-durable-graph-python) |
-| [Knowledge](/azure-functions-python/knowledge/) | Knowledge retrieval (RAG) decorators | Experimental | [Docs](/azure-functions-python/knowledge/) · [GitHub](https://github.com/yeongseon/azure-functions-knowledge-python) |
+| [Durable Graph](/azure-functions-python/durable-graph/) | Manifest-first graph runtime built on Durable Functions | Retired (unsupported) | [Docs](/azure-functions-python/durable-graph/) · [GitHub](https://github.com/yeongseon/azure-functions-durable-graph-python) |
+| [Knowledge](/azure-functions-python/knowledge/) | Knowledge retrieval (RAG) decorators | Retired (unsupported) | [Docs](/azure-functions-python/knowledge/) · [GitHub](https://github.com/yeongseon/azure-functions-knowledge-python) |
 | [DB](/azure-functions-python/db/) | DB helper and pseudo-trigger patterns | Experimental | [Docs](/azure-functions-python/db/) · [GitHub](https://github.com/yeongseon/azure-functions-db-python) |
 
 ### Recipes

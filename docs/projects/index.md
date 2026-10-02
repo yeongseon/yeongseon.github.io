@@ -23,8 +23,8 @@ for how the pieces fit together.
 | Scaffold | Scaffold production-style projects | Early | [Docs](/azure-functions-python/scaffold/) · [GitHub](https://github.com/yeongseon/azure-functions-scaffold-python) |
 | Cookbook | Recipes, examples, integration patterns | Early | [Docs](/azure-functions-python/cookbook/) · [GitHub](https://github.com/yeongseon/azure-functions-cookbook-python) |
 | LangGraph | LangGraph integration patterns | Experimental | [Docs](/azure-functions-python/langgraph/) · [GitHub](https://github.com/yeongseon/azure-functions-langgraph-python) |
-| Durable Graph | Manifest-first graph runtime on Durable Functions | Experimental | [Docs](/azure-functions-python/durable-graph/) · [GitHub](https://github.com/yeongseon/azure-functions-durable-graph-python) |
-| Knowledge | Knowledge retrieval (RAG) decorators | Experimental | [Docs](/azure-functions-python/knowledge/) · [GitHub](https://github.com/yeongseon/azure-functions-knowledge-python) |
+| Durable Graph | Manifest-first graph runtime on Durable Functions | Retired (unsupported) | [Docs](/azure-functions-python/durable-graph/) · [GitHub](https://github.com/yeongseon/azure-functions-durable-graph-python) |
+| Knowledge | Knowledge retrieval (RAG) decorators | Retired (unsupported) | [Docs](/azure-functions-python/knowledge/) · [GitHub](https://github.com/yeongseon/azure-functions-knowledge-python) |
 | DB | DB helper and pseudo-trigger patterns | Experimental | [Docs](/azure-functions-python/db/) · [GitHub](https://github.com/yeongseon/azure-functions-db-python) |
 
 ---

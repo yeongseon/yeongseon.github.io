@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#03180e"/>
+  <path d="M32 7 53 14v16c0 13-8 22-21 27C19 52 11 43 11 30V14z" fill="#009240" stroke="#b9ff4b" stroke-width="2"/>
+  <text x="32" y="34" text-anchor="middle" fill="#fff" font-family="Arial Black,Arial" font-size="15" font-weight="900">JS20</text>
+  <path d="M20 42h24" stroke="#b9ff4b" stroke-width="2" stroke-linecap="round"/>
+</svg>
